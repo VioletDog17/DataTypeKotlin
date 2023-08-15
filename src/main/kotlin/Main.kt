@@ -1,13 +1,15 @@
 import java.time.temporal.TemporalAmount
-
+import kotlin.math.roundToInt
 fun main(args: Array<String>) {
     println("Задание 1")
     val amount =1000
     println(task1(amount))
 
     println("Задание 2")
-    val likes = 61
+    val likes = 512
     println(task2(likes))
+
+
 }
 fun task1(sum: Int): Double {
     val sum = 10000*100 //1000 в копейках
@@ -19,8 +21,8 @@ fun task1(sum: Int): Double {
     return(tax)
 }
 fun task2(like: Int): String {
-    var ans = ""
-    if (like % 10 == 1 && like % 10!= 11){
+    var ans = "  "
+    if (like % 10 == 1 && like % 100 != 11){
         ans="человеку"
     }else {
         ans = "людям"
